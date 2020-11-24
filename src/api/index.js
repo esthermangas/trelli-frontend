@@ -99,4 +99,5 @@ const fetchResource = (
     });
 };
 
-export default { fetchResource };
+export default { fetchResource }
+;

@@ -7,7 +7,9 @@ import Api from '../../api';
 
 const SignUp = () => {
   const [data, setData] = useState({ name: '', email: '', password: '' });
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState({ name: '', email: '', password: '' });
+  const [errorConfirmPassword, setErrorConfirmPassword] = useState('');
   const history = useHistory();
 
   const handleChangeName = (e) => {
@@ -22,6 +24,36 @@ const SignUp = () => {
     setData({ ...data, password: e.target.value });
   };
 
+  const handleChangeConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  if (
+    data.password !== confirmPassword
+    && errorConfirmPassword === ''
+    && confirmPassword.length > 0
+    && data.password.length > 0
+  ) {
+    setErrorConfirmPassword('The passwords do not match');
+  }
+
+  if (
+    data.password.length > 0 &&
+    confirmPassword.length > 0 &&
+    data.password === confirmPassword &&
+    errorConfirmPassword !== ''
+  ) {
+    setErrorConfirmPassword('');
+  }
+
+  if (
+    data.password.length === 0 &&
+    confirmPassword.length === 0 &&
+    errorConfirmPassword !== ''
+  ) {
+    setErrorConfirmPassword('');
+  }
+
   const signUpUser = () => {
     Api.fetchResource('POST', 'auth/register', { body: data })
       .then((response) => {
@@ -33,7 +65,6 @@ const SignUp = () => {
         const err = apiError.response.error;
         setError(err);
       });
-    
   };
 
   return (
@@ -74,10 +105,19 @@ const SignUp = () => {
                 onChange={handleChangePassword}
                 error={error.password}
                 infoMessage={error.password}
+                password
               />
             </div>
             <div className={styles.input}>
-              <TextField label="Confirm Password" color="sky" />
+              <TextField
+                label="Confirm Password"
+                color="sky"
+                onChange={handleChangeConfirmPassword}
+                value={confirmPassword}
+                infoMessage={errorConfirmPassword}
+                error={errorConfirmPassword}
+                password
+              />
             </div>
             <div className={styles.button}>
               <Button label="send" color="sky" onClick={signUpUser} />

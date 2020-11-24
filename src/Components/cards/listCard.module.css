@@ -1,0 +1,14 @@
+.container{
+    background-color: #eefaff;
+    width: 100%;
+    padding: 4px;
+    min-height: 60px;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    display: flex;
+}
+
+.root{
+    display: flex;
+    padding-bottom: 4%;
+}

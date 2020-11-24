@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PrivateRoute from './Components/PrivateRoute';
-import LogIn from './Views/LogIn/logIn.view';
+import LogIn from './Views/LogIn';
 import Background from './images/background.jpg';
-import SignUp from './Views/SignUp/signUp.view';
+import SignUp from './Views/SignUp';
+import Main from './Views/Main';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/login" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
-          <PrivateRoute exact path="/app" render={() => <div>app</div>} />
+          <PrivateRoute path="/app" component={Main} />
         </Switch>
       </Router>
     </div>

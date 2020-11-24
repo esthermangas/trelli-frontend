@@ -60,6 +60,7 @@ const LogIn = () => {
                 value={data.password}
                 error={error.password}
                 infoMessage={error.password}
+                password
               />
             </div>
             <div className={styles.button}>

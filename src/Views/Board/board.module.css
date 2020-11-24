@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+.root{
+    max-height: 100%;
+    width: 100%;
+}
+
+.appBar {
+    height: 50px;
+    display: flex;
+}
+.button{
+    position: absolute;
+}
+.title{
+    flex-grow: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: calc(100vh - 50px);
+}
+
+.lists{
+    display: flex;
+    align-items: start;
+    padding: 0 0.8rem 0.8rem;
+    overflow-x: auto;
+    height: calc(100vh - 50px);
+
+}
+
+.lists::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.lists::-webkit-scrollbar-thumb {
+    background-color: rgba(33, 33, 33, 0.7);
+    border-radius: 4px;
+
+}
+
+.item{
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(223, 243, 255, 0.76);
+    max-height: calc(100vh - 11.8rem);
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+    padding: 4px;
+}
+
+.finalItem {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(223, 243, 255, 0.76);
+    max-height: calc(100vh - 11.8rem);
+    border-radius: 0.3rem;
+    margin-right: 0;
+}
+
+
+
+
+.text{
+    display: flex;
+    margin-left: auto;
+    width: 240px;
+}
+
+.spanClose{
+    top: 6px;
+    left: 129px;
+    cursor: pointer;
+}
+
+.sendContainer{
+    display: flex;
+}
+
+.sendIcon{
+    margin-left: auto;
+}

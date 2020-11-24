@@ -1,0 +1,47 @@
+.modalRoot {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(1, 5, 37, 0.3); /* Black w/ opacity */
+}
+
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+}
+
+.modalContent {
+    min-height: 200px;
+    min-width: 300px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.headerTitle{
+    padding-top: 8px;
+    align-self: flex-start;
+}
+.iconCross {
+    cursor: pointer;
+    position: relative;
+    align-self: flex-end;
+}

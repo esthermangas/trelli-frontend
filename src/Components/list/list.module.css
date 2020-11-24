@@ -1,0 +1,72 @@
+.header {
+    display: flex;
+}
+
+.title{
+    width: 100%;
+    cursor: pointer;
+}
+.changeName{
+    width: 100%;
+}
+
+.optionsButton{
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.headerChangeName {
+    background-color: rgba(117, 136, 148, 0.76);
+;
+}
+
+.sendButton {
+    cursor: pointer;
+    border-radius: 4px;
+    height: 25px;
+    position: relative;
+    top: 8px;
+}
+.optionsButton:hover{
+    transition-duration: 200ms;
+    background-color: rgba(201, 221, 233, 0.76);
+}
+
+.sendButton:hover{
+    transition-duration: 200ms;
+    background-color: rgba(201, 221, 233, 0.76);
+}
+
+.dropdownContainer{
+    margin: 10px;
+}
+
+.color{
+    background-color: darkred;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInput {
+    text-align: left;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: #eefaff;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    font-family: var(--fontFamily);
+    font-size: 16px;
+    min-height: 60px;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    vertical-align: top;
+}
+
+.inputButton{
+    margin: 4% 0;
+}

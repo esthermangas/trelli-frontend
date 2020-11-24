@@ -1,0 +1,71 @@
+.modalRoot{
+    background-color: white;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+.title{
+    padding: 4px;
+    display: flex;
+}
+.titleFix{
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
+    width: calc(100% - 36px);
+}
+.titleFix:hover{
+    transition-duration: 200ms;
+    background-color: #f3fdff;
+    cursor: text;
+}
+
+.titleContainer{
+    padding: 2px;
+}
+
+
+.description{
+    padding: 4px;
+}
+.input{
+    text-align: left;
+    border: 1px solid var(--sky);
+    resize: none;
+    outline: none;
+    background-color: #f3fdff;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    font-family: var(--fontFamily);
+    font-size: 16px;
+    border-radius: 2px;
+    vertical-align: top;
+}
+
+.saveIcon{
+    margin-left: 8px;
+    background-color: var(--estherGreen);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.saveIcon:hover{
+    transition-duration: 200ms;
+    background-color: rgb(22, 122, 90);
+}
+
+.saveButton {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer{
+    width: 30%;
+}
+
+.deleteButton{
+    position: relative;
+    top: 230px;
+}
