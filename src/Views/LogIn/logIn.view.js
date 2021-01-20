@@ -8,15 +8,12 @@ const LogIn = () => {
   const [data, setData] = useState({ email: '', password: '' });
   const [error, setError] = useState({ email: '', password: '' });
   const history = useHistory();
-
   const handleChangeEmail = (e) => {
     setData({ ...data, email: e.target.value });
   };
-
   const handleChangePassword = (e) => {
     setData({ ...data, password: e.target.value });
   };
-
   const logInUser = () => {
     Api.fetchResource('POST', 'auth/login', { body: data })
       .then((response) => {

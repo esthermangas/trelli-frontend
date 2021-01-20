@@ -15,15 +15,12 @@ const SignUp = () => {
   const handleChangeName = (e) => {
     setData({ ...data, name: e.target.value });
   };
-
   const handleChangeEmail = (e) => {
     setData({ ...data, email: e.target.value });
   };
-
   const handleChangePassword = (e) => {
     setData({ ...data, password: e.target.value });
   };
-
   const handleChangeConfirmPassword = (e) => {
     setConfirmPassword(e.target.value);
   };

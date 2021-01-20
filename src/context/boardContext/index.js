@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { useBoardReducer } from './reducer';
+import boardActions from './types';
 
 const BoardContext = createContext();
 

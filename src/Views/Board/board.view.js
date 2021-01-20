@@ -72,7 +72,6 @@ const Board = () => {
     }
   };
   const onDragEnd = (result) => {
-    debugger;
     dispatch({
       type: boardActions.BOARD__UPDATE_LIST_ORDER,
       payload: {

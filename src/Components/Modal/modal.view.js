@@ -5,7 +5,6 @@ import styles from './modal.module.css';
 const Modal = (props) => {
   const ref = useRef(null);
   const { children, open, onClose, title } = props;
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
